@@ -13,7 +13,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Date;
 
 @SpringBootApplication
-public class DemoApplication implements CommandLineRunner {
+public class DemoApplication {
 
 	@Autowired
 	private UserRepository userRepository;
@@ -26,11 +26,5 @@ public class DemoApplication implements CommandLineRunner {
 //		session.save(user);
 //		session.getTransaction().commit();
 //		session.close();
-	}
-
-	@Override
-	public void run(String... args) throws Exception {
-		User user = userRepository.findById(1).orElse(null);
-		System.out.println(user);
 	}
 }
