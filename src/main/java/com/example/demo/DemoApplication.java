@@ -19,12 +19,5 @@ public class DemoApplication {
 	private UserRepository userRepository;
 	public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-//		SessionFactory sessionFactory = new Configuration().addAnnotatedClass(User.class).buildSessionFactory();
-//		Session session = sessionFactory.getCurrentSession();
-//		session.beginTransaction();
-//		User user = new User(1, "admin", "admin", true, new Date("01-01-2000"), true);
-//		session.save(user);
-//		session.getTransaction().commit();
-//		session.close();
 	}
 }

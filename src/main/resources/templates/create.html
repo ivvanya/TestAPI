@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заголовок страницы</title>
+    <link rel="stylesheet" href="./styles/style.css">
+
+    <meta property="og:title" content="Заголовок страницы в OG">
+    <meta property="og:description" content="Описание страницы в OG">
+    <meta property="og:image" content="https://example.com/image.jpg">
+    <meta property="og:url" content="https://example.com/">
+</head>
+<body>
+<form th:action="@{/create}" th:object="${user}" method="post">
+    <div>
+        <div class="login">Введите свой логин
+            <label for="login">
+                <input type="text" id="login" th:field="*{login}">
+            </label>
+        </div>
+        <br>
+        <div class="password">Введите свой пароль
+            <label for="password">
+                <input type="password" id="password" th:field="*{password}">
+            </label>
+        </div>
+        <br>
+        <div class="sex">Выберите пол
+            <label for="sex">
+                <input type="checkbox" id="sex" th:field="*{sex}">
+            </label>
+        </div>
+        <br>
+        <div class="birth">Введите дату рождения
+            <label for="birth">
+                <input type="date" id="birth" th:field="*{birth}">
+            </label>
+        </div>
+        <br>
+        <div class="isAdmin">Пользователь админ?
+            <label for="isAdmin">
+                <input type="checkbox" id="isAdmin" th:field="*{isAdmin}">
+            </label>
+        </div>
+        <br>
+        <button> Создать</button>
+    </div>
+</form>
+</body>
+</html>
